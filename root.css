@@ -353,3 +353,77 @@ html,body{
     transform: translateY(100%);
 
 }
+
+
+/* //meadia queries */
+
+@media (max-width: 768px) {
+    #navbar {
+        padding: 10px 20px; /* Adjust padding for mobile */
+    }
+
+    #heading {
+        margin-top: 20px; /* Adjust margin for mobile */
+        margin-left: 20px; /* Adjust margin for mobile */
+    }
+
+    #heading h1 {
+        font-size: 6vw; /* Adjust font size for mobile */
+        margin-left: 15px; /* Adjust margin for mobile */
+    }
+
+    #subheading {
+        margin-top: 50px; /* Adjust margin for mobile */
+        padding-right: 20px; /* Adjust padding for mobile */
+    }
+
+    #subheading h5 {
+        font-size: 3vw; /* Adjust font size for mobile */
+    }
+
+    #footer_landingpage {
+        margin-top: 20px; /* Adjust margin for mobile */
+    }
+
+    #footer_landingpage .circle {
+        width: 20px; /* Adjust size for mobile */
+        height: 20px; /* Adjust size for mobile */
+    }
+
+    #secondpad {
+        padding-top: 100px; /* Adjust padding for mobile */
+        padding-right: 5vw; /* Adjust padding for mobile */
+        padding-left: 5vw; /* Adjust padding for mobile */
+    }
+
+    .element h1 {
+        font-size: 7vw; /* Adjust font size for mobile */
+    }
+
+    #about img {
+        width: 150px; /* Adjust image size for mobile */
+        height: 150px; /* Adjust image size for mobile */
+        padding-right: 15px; /* Adjust padding for mobile */
+    }
+
+    #text {
+        width: 100%;
+    }
+
+    #text h5 {
+        font-size: 2vw; /* Adjust font size for mobile */
+    }
+
+    #text p {
+        margin-bottom: 15px; /* Adjust margin for mobile */
+    }
+
+    #text a {
+        padding: 10px 15px; /* Adjust padding for mobile */
+        font-size: 10px; /* Adjust font size for mobile */
+    }
+
+    #subscribe h5 {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
