@@ -52,6 +52,21 @@ html,body{
 }
 
 
+
+ .underline:hover::after{
+    width: 100%;
+}
+
+.underline::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 0.1px;
+    background: white;
+    transition: 0.8s ease-in-out;
+
+}
+
 #navbar a{
     text-decoration: none; 
     /* removes the underline from the link */
@@ -262,6 +277,7 @@ html,body{
     color: white;
     padding: 20px 20px;
     padding-bottom: 7vw;
+    width: fit-content;
 }
 
 #subscribe h5{
