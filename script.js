@@ -3,13 +3,46 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-function mousefollow(){
+function mousefollow(xscale,yscale){
     window.addEventListener("mousemove",function(dets){
-        document.querySelector("#mousecircle").style.transform=`translate(${dets.clientX}px, ${dets.clientY}px)`;
+        document.querySelector("#mousecircle").style.transform=`translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale},${yscale})`;
         ///console.log(dets.clientX,dets.clientY);
     })
 
 }
+
+var timeout;
+
+function mousesize(){
+  var xscale=1;
+  var yscale=1;
+
+  var xprev=0;
+  var yprev=0;
+
+  window.addEventListener("mouseover",function(dets){
+    clearTimeout(timeout)
+    var xdiff=dets.clientX-xprev;
+    var ydiff=dets.clientY-yprev;
+
+    xscale=gsap.utils.clamp(0.8,1.2,xdiff);
+    yscale=gsap.utils.clamp(0.8,1.2,ydiff);
+    xprev=dets.clientX;
+    yprev=dets.clientY;
+
+    mousefollow(xscale,yscale);
+
+    timeout=setTimeout(function(){
+
+      document.querySelector("#mousecircle").style.transform=`translate(${dets.clientX}px, ${dets.clientY}px) scale(1,1)`;
+    },100)
+    console.log(timeout);
+
+
+} 
+    
+
+)}
 
 
 function firstanimations(){
@@ -37,5 +70,7 @@ function firstanimations(){
         });
 }
 
+
 mousefollow();
 firstanimations();
+mousesize();

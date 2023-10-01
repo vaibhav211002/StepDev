@@ -52,15 +52,15 @@ html,body{
 }
 
 
-
-
-
 #navbar a{
     text-decoration: none; 
     /* removes the underline from the link */
     font-size: 18px;
     color: white;
+
 }
+
+
 
 
 #heading{
@@ -149,6 +149,22 @@ html,body{
     gap: 5px;
 }
 
+
+.underline::after{
+    text-decoration: overline;
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    display: block;
+    transition: 0.5s ease-in-out;
+}
+
+.underline:hover::after{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    display: block;
+}
 
 #secondpad{
     padding-top: 200px;
